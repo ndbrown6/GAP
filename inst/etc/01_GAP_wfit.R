@@ -5,9 +5,7 @@
 #==================================================
 GAP_Params = read.csv(file="../GAP_Params/GAP_Params.csv", header=TRUE, sep=",", row.names=1, stringsAsFactors=FALSE)
 sampleNames = rownames(GAP_Params)
-pb = txtProgressBar(min=1, max=length(sampleNames), style=3)
 for (i in 1:length(sampleNames)) {
-	setTxtProgressBar(pb, i)
 	if (GAP_Params[sampleNames[i],"Array_QC"]==1) {
 		if (!file.exists("../Results/")) {
 			dir.create(path="../Results/")
@@ -39,4 +37,3 @@ for (i in 1:length(sampleNames)) {
 		save(tmp, notNAs, resWfit, file=paste("../Results/", sampleNames[i], "/CopyNumber_and_Genotype.RData", sep=""))
 	}
 }
-close(pb)
