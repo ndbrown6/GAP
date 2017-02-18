@@ -3,7 +3,6 @@
 # dbrown@ulb.ac.be
 # http://homepages.ulb.ac.be/~dbrown/
 #==================================================
-source(paste0(.libPaths(), "/GAP/etc/config.R"))
 wD = getwd()
 GAP_Params = read.csv(file="../GAP_Params/GAP_Params.csv", header=TRUE, sep=",", row.names=1, stringsAsFactors=FALSE)
 sampleNames = rownames(GAP_Params)
