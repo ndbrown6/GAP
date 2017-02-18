@@ -3,8 +3,7 @@
 # dbrown@ulb.ac.be
 # http://homepages.ulb.ac.be/~dbrown/
 #==================================================
-rm(list=ls(all=TRUE))
-source('config.R')
+source(paste0(.libPaths(), "/GAP/etc/config.R"))
 GAP_Params = read.csv(file="../GAP_Params/GAP_Params.csv", header=TRUE, sep=",", row.names=1, stringsAsFactors=FALSE)
 sampleNames = rownames(GAP_Params)
 pb = txtProgressBar(min=1, max=length(sampleNames), style=3)

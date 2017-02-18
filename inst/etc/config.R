@@ -19,6 +19,3 @@ library('stringr')
 library('gdata')
 library('car')
 data('CytoBand')
-
-ncores = 24
-registerDoMC(ncores)
