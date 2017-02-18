@@ -111,7 +111,7 @@
 	}
 	CNA.object = CNA(genomdat=tmp[,1], chrom=tmp[,2], maploc=tmp[,3], data.type="logratio", sampleid=NULL)
 	segment.CNA.object = segment(x=CNA.object, alpha=0.1, nperm=100, p.method="perm", min.width=5, eta=0.05,
-							 	 trim=0.025, undo.splits="sdundo", undo.SD=2, verbose=1)
+							 	 trim=0.025, undo.splits="sdundo", undo.SD=2, verbose=0)
 	tmp = segment.CNA.object$output
 	dataF[tmp$loc.end,c_bpBAF] = 1
 	seg = abs(SNP_annot[1:(nSNP-1),C_Chr]-SNP_annot[2:(nSNP-0),C_Chr])+abs(SNP_annot[1:(nSNP-1),C_Chr+1]-SNP_annot[2:(nSNP-0),C_Chr+1])+dataF[1:(nSNP-1),c_bpLRR]+dataF[1:(nSNP-1),c_bpBAF]
