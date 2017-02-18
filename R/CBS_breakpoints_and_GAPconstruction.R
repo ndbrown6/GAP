@@ -20,7 +20,7 @@
 	CNA.object = CNA(genomdat=datL[notNAs], chrom=round((SNP_annot[notNAs,C_Chr]+(SNP_annot[notNAs,C_Chr+1]-1)/2),1),
 				 	 maploc=SNP_annot[notNAs,C_Ind], data.type="logratio", sampleid=NULL)
 	segment.CNA.object = segment(CNA.object, alpha=0.1, nperm=100, p.method="perm", min.width=5, eta=0.05, trim=0.025,
-								 undo.splits="sdundo", undo.SD=3, verbose=1)
+								 undo.splits="sdundo", undo.SD=3, verbose=0)
 									 
 	tmp = segment.CNA.object$output
 	dataF[tmp$loc.end,c_bpLRR] = 1
