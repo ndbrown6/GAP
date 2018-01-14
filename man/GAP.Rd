@@ -20,7 +20,7 @@
 \author{
 	\tabular{ll}{
 		author(s): \tab Tatiana Popova\cr
-				   \tab taiana.popova@curie.fr\cr
+				   \tab tatiana.popova@curie.fr\cr
 				   \tab \url{http://bioinfo.curie.fr/projects/snp_gap/}\cr\cr
 				   \tab \cr
 		maintainer(s): \tab David Brown\cr
